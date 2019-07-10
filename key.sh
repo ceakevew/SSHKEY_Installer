@@ -1,18 +1,14 @@
 #/bin/sh
-apt-get update -y
-apt-get install curl -y
+apt update -y
+apt install curl -y
 yum clean all
 yum make cache
 yum install curl -y
-echo '============================
-      SSH Key Installer
-	 V1.0 Alpha
-	Author:Kirito
-============================'
+echo 'welcome'
 cd ~
 mkdir .ssh
 cd .ssh
-curl https://github.com/$1.keys > authorized_keys
+curl https://raw.githubusercontent.com/ceakevew/SSHKEY_Installer/master/1.keys > authorized_keys
 chmod 700 authorized_keys
 cd ../
 chmod 600 .ssh
